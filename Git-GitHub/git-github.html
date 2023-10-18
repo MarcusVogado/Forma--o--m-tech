@@ -109,10 +109,17 @@
                 <span>git commit-m "Mensagem" :</span> Para gravar(comitar) as alterações no repositório.
             </p>
             <p class="comand">
-                <span>git commit -am "Mensagem":</span> Com este comando juntamos o comando git add e git commit.
+                <span>git commit -am "Mensagem":</span> Com este comando juntamos o comando git add e git commit. Novos
+                arquivos precisam de git add.
             </p>
             <p class="comand">
                 <span>git log</span>Para ver os commits que foram feitos.
+            </p>
+            <p class="comand">
+                <span>git log --oneline</span>Para ver todos os commits que foram feitos.
+            </p>
+            <p class="comand">
+                <span> git log --stat</span>Para ver todos os detalhes dos commits que foram feitos.
             </p>
             <p class="comand">
                 <span>git remote add origin &lt;link do repositório&gt; :</span> Para apontar para um repositório online
@@ -135,6 +142,14 @@
             <p class="comand">
                 <span>git merge &lt;nome da branch a ser mergeada&gt;:</span> Para salvar alterações de uma branch
                 separada na branch que estamos trabalhando
+            </p>
+            <p class="comand">
+                <span>git diff:</span>Para revisar modificações e comparar os aqruivos com o últimos commit feito.
+                O git diff não poderá ser utilizado para arquivos novos, que ainda
+                não estão sendo rastreados pelo Git (ou seja, que ainda não tiveram o
+                primeiro git add executado).
+                Para verificar um intervalo de commits utilizamos: git diff 222cccc..8877887 onde passamos os ids dos
+                commits separados por dois pontos("..")
             </p>
         </section>
         <section class="content__ignore">
