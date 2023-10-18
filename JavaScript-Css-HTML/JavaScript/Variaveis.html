@@ -6,6 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Variaveis</title>
     <script>
+        // São utilizadas para armazenar dados que podem ou não ser definidos não sua declaração, sendo possível atualizar e recupera-los sempre que necessário.
+
+        var num = 1;
+        num = 3;
+        var price = 1.5;
+        var myName = "Marcus";
+        var trueValue = true;
+        var nullVar = null;
+        var und; // variável indefinida undefined
+
+        console.log('Imprimindo as variáveis\n')
+
+        console.log('num: ' + num);
+        console.log('myName: ' + myName);
+        console.log('trueValue: ' + trueValue);
+        console.log('price: ' + price);
+        console.log('nullVar: ' + nullVar);
+        console.log('undefined: ' + und);
+
+        console.log('\n')
+
+
+        //Para saber o tipo de uma variável utilizamos o typeoff
+        console.log('Imprimindo o tipo das variáveis\n')
+
+        console.log(typeof num);
+        console.log(typeof myName);
+        console.log(typeof trueValue);
+        console.log(typeof price);
+        console.log(typeof nullVar);
+
+        console.log('\n')
+
         //Declaração de variáveis
         var nome = "Marcus Vogado";
         var idade = 30;
@@ -15,6 +48,29 @@
         //Concatenação
         document.write("Boa noite: " + nome)
         document.write(`Boa noite, ${nome} você tem: ${idade} anos e possui: ${altura} de altura`)
+
+        // Se refere ao local em que podemos acessar a variável no algoritmo(também pode ser em uma função quando trabalhamos com escopos de função)
+        //Podem ser locais ou globais
+        let myVariable = 'global';
+        let myOtherVariable = 'global';
+        function myFunction() {
+            var myVariable = 'local';
+            return myVariable;
+        }
+
+        function myOtherFunction() {
+            myOtherVariable = 'local';
+            return myOtherVariable;
+        }
+
+        console.log(myVariable);
+        console.log(myFunction());
+        console.log(myOtherFunction());
+
+        //Não conseguimos chamar uma variável de escopo local em um escopo global, mas podemos chamar uma variavel de escopo global para um escopo local
+
+
+
     </script>
 </head>
 

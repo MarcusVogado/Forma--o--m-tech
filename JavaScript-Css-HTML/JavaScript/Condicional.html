@@ -1,25 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        //Variável
-        let media =4;
-        // Condicional
-        if(media>=7){
-            document.write("Aluno Aprovado(a)")
+
+        /*Estruturas condicionais servem para dizer se uma determinada ação será executada ou não
+        Assim como outras linguagens como C e Java o JavaScript também tem estruturas de controle.
+        */
+
+        //Vamos falar do if...else  e o switch
+
+        //Primeira instrução Condicional é a do if... else.
+
+        let num = 1;
+        if (num === 1) {
+            console.log('os números são iguais');
         }
-        else if( media<7 && media >=5){
-            document.write("Em Recuperação")
+
+        // Podemos utilizar a estrutura if...else se quisermos executar um bloco de código somente se a condição for true
+
+        if (num === 0) {
+            console.log('Os números são iguais')
+        } else {
+            console.log('Número é diferente de 0 seu número é: ' + num)
         }
-        else{
-            document.write("Aluno Reprovado(a)")
+
+
+        //podemos ter if...else aninhados
+        //Um if aninhado é uma hirerarquia, ou seja, eu desejo testar uma certa condição, apenas se uma primeira condição for satisfeita e assim por diante. 
+
+        if (num >= 1) {
+            console.log('Número igual a 1');
+            if (num <= 5) {
+                console.log('Número não é maior ou igual a 5');
+            } else {
+                console.log('Número maior que 5');
+            }
+        } else {
+            console.log('Número menor que 1');
         }
+
+        //A instrução if...else também pode ser representada por um operador ternário
+
+        (num === 1) ? console.log('Números iguais') : console.log('Números diferentes');
+
+
+        //Utilizando o SWITCH
+        // A condicional switch avalia uma expressão, combinando o valor da expressão para um cláusula case, e executa as instruções associadas ao case.
+
+
+        let month = 2;
+
+        switch (month) {
+            case 1:
+                console.log('Janeiro');
+                break;
+            case 2:
+                console.log('Fevereiro')
+                break;
+            case 3:
+                console.log('Março')
+                break;
+            default:
+                console.log('Mês selecionado não disponível');
+        }
+
+                //Variável
+                let media = 4;
+                // Condicional
+                if (media >= 7) {
+                    document.write("Aluno Aprovado(a)")
+                }
+                else if (media < 7 && media >= 5) {
+                    document.write("Em Recuperação")
+                }
+                else {
+                    document.write("Aluno Reprovado(a)")
+                }
     </script>
 </head>
+
 <body>
     <h1>Teste</h1>
 </body>
+
 </html>

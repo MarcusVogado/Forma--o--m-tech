@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+         Os laços são usados com frequência quando trabalhamos com arrays.
+         Ou quando determinado comportamente tem que ser repedido por n vezes.
+        */
+
+        //Utilizando o laço for
+
+        let contador = 10;
+        for (let i = 0; i < contador; i++) {
+            console.log(i);
+        }
+
+        //Utilizando o While
+        //O laço só será executado se a condição for verdadeira. 
+        let i = 0;
+        while (i < contador) {
+            console.log(i);
+            i++;
+        }
+
+        //esse trecho não será executado já que o while só iniciara o laço(loop) se a condição for verdadeira
+        let p = 2;
+        while (p < 1) {
+            console.log(p)
+            p++
+        }
+
+
+        //Utilizando o do...while
+        //A diferença pro while é que o do while irá ser executado pelomenos uma unica vez, já que sua condição só é testada após a execução do bloco de código
+
+        let j = 0;
+        do {
+            console.log('do while com J ' + j);
+            j++;
+        }
+        while (j < contador);
+
+        // diferente do while esse trecho será executado a primeira vez, mas não passará no teste  
+
+        let b = 15;
+        do {
+            console.log('do while só uma vez')
+            b++;
+        } while (b < 10)
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        Os dois operadores de igualdade aceitos em JavaScript podem causar um pouco de confusão quando trabalhamos com eles.
+        
+        Operador(==)
+        Quanto utilizamos (==), os valores poderão ser considerados iguais mesmo se forem de tipos diferentes. Isso pode ser
+        confuso até para os mais experientes.
+        Vamos utilizar esses dados como exemplo:
+        
+        Tipo(x)/ Tipo(y)    /  Resultado
+        null   / undefined  / true
+        undefined / null    / true
+        Number/ String      / x==toNumber(y)
+        String/ Number      /toNumber(x)== y
+        Boolean/ Any        /toNumber(x)== y
+        String ou Number/ Object / x==toPrimitive(y)
+        Object/ String ou Number/ toPrimitive(x)==y
+        
+        Se x e y forem do mesmo tipo, então JavaScript usará o método equals para comparar os dois valores ou objetos. 
+        Qualquer outra combinação não listada a cima resultará em false
+        
+        Precisamos entender oque é NaN: 
+        A propriedade global NaN é um valor especial que significa Not-A-Number (não é um número).
+        
+        NaN === NaN; // falso
+        Number.NaN === NaN; // falso
+        isNaN(NaN); // verdadeiro
+        isNaN(Number.NaN); // verdadeiro
+        
+        Vamos entender o método toNumber e toPrimitive
+        
+        toNumber:
+        
+        Tipo o valor / Resultado
+        
+        undefined / é NaN
+        null / É +0
+        Boolean / Se o valor for true, o resultado será 1; se false, o resultado será +0
+        Number/ é o valor do número
+        
+        toPrimitive:
+        Tipo o valor / Resultado
+        
+        Object / Se valueOf devolver um valor primitivo, esse valor primitivo será devolvido, caso contrário, se toString devolver um valor primitivo
+        esse valor será devolvido; se não, um erro será devolvido.
+        
+        Vamos ao resultado e alguns exemplos:
+        
+        
+        */
+
+        //Sabemos que o resultado será true pois a string possui tamanho >=1
+        console.log('packt' ? true : false)
+
+        // E esse código?
+
+        console.log('packt' == true)
+
+        //Vamos entender porque ele deu False
+        //O valor booleano é convertido com toNumber, portanto temos packt==1
+        //Em seguida, o valor de string é convertido com toNumber, Como a string é constituída de caracteres alfabéticos,
+        // NaN será devolvido, portanto temos NaN ==1, que é false
+
+        console.log('1' == 1 ? true : false) //true
+        let obj = { idade: 10 }
+        console.log(obj.idade == '10' ? true : false);
+
+        /* 
+        OPERADOR(===)
+        Esse é muito mais simples. Se estivermos comparando dois valores de tipos diferentes o resultado será sempre False.
+        Se forem do mesmo tipo eles serão comparados de acordo com as informações a seguir:
+        
+        Tipo(X) / Valores / Resultado
+        Number / x tem o mesmo valor que y(Mas não é NaN) / true
+        String/ x e y tem caracteres idênticos/ true
+        Boolean/ x e y são true ou ambos são false / true
+        Object / x e y referenciam o mesmo objeto/ true
+        Exemplos:
+        */
+
+        console.log('packt' === true)//false
+        console.log('packt' === 'packt')//true
+        let person1 = { nome: 'Marcus' };
+        let person2 = { nome: 'Marcus' };
+        console.log(person1 === person2)//false , objetos diferentes
+
+        let personReferenciaPerson1 = person1;
+        console.log(person1 === personReferenciaPerson1)//true, objeto está referenciando a person1
+
+        //Precisamos de operadores quando realizamos qualquer operaçãoem uma linguagem de programação. A linguagem JavaScript também tem operadores aritméticos
+        // temos os operadores de: atribuição, comparação, lógicos, bit a bit(bitwise) e unários, entre outros
+
+        let num = 0;
+        num = num + 2;
+        num = num * 3;
+        num = num / 2;
+        num++;
+        num--;
+        num += 1;
+        num -= 2;
+        num *= 3;
+        num /= 2;
+        num %= 3;
+
+
+        //Operadores
+
+        /*
+        ARITMÉTICOS: 
+        
+        " + " -> Adição
+        " - " -> Subtração
+        " * " -> Multiplicação
+        " / " -> Divisão
+        " % " -> Módulo(Resto da divisão) *dica (Muitou tilizado para saber se o número é par ou ímpar) - "kkk";
+        " ++ " -> Incremento
+        " -- " -> Decremento
+        
+        ATRIBUIÇÃO:
+        " = " - Atribuição: let nome = "Marcus Vogado" estou atribuindo um valor para a variável nome;
+        " += " - Atribuição de Soma: x+=y Eu estou pegando a variável "x"  e somando ela mesma com a variável "y", é a mesma coisa que isso: x = x+y; 
+        " -= " - Atribuição de Subtração x-=y É a mesma coisa do exemplo anterios só que estou subtraindo.
+        " *= " - Atribuição de Multiplicação (x*=y) é igual a (x = x*y).
+        " /= " - Atribuição de Divisão (x/=y) ou seja x é igual a x dividido por y (x é 10 e y é 2: x= 10/2) 
+        " %= " - Atribuição de Resto da Divisão (x %= y) é igual a (x= x%y) só que agora ele vai pegar o resto da divisão entre x e y  e atribuir para a variável x
+        
+        
+        COMPARAÇÃO:
+        DICA DE OURO
+        Cuidado com os comparadores de igualdades:
+        
+        let a = "1"; lembre-se isso é uma variável do tipo string contendo um número 
+        let b = 1; isso é uma variável do tipo number
+        
+        
+        console.log(a==b) isso vai retorna (true) por que???
+        porque quando utilizamos o operador de igualdade com dois (==) nos estamos comparando o conteúdo da variável.
+        
+        já quando utilizamos três (===) nos estamos comparando o conteúdo e o tipo da variável, por isso que se fizermos assim:
+        
+        console.log(a === b) isso vai retorna(false)
+        
+        " == " - Igual a(Lembre-se da dica)
+        " === " - Igual a(Tanto valor quanto o tipo da variável ou objeto)
+        " != " - Diferente de
+        " > " - Maior que
+        " >= " - Maior ou Igual
+        " < " - Menor que 
+        " <= "- Menor ou Igual
+        
+        LÓGICOS:
+        
+        " && " - E (as duas condições tem que ser verdadeiras )
+        " || " - OU( Uma das condições tem que ser verdadeira)
+        " ! "- Negação(Par
+        */
+
+        let ehVerdadeiroTeste = true;
+
+        /*
+        Aqui com está condigão eu estou esperando que o meu teste de ehVerdadeiro de falso pois eu estou utilizando o operedor lógico de negação 
+        então ao fazer isso eu estou dizendo assim- negue essa váriavel se a negação for verdadeira, então execute o código a seguir...
+        mas pera aí o ehVerdadeiroTeste é = true então o código deveria ser executado....  aiiii está a sua resposta,
+        quando eu faço a negação de um valor true ele passa a ser false e da mesma forma ao contrario -hehe
+        e é por isso que ele não será executado.
+        se eu tenho um valor = true e estou utilizando a negação, ele passa a ser falso e por conter um valor falso o meu método não será executado
+        */
+        if (!ehVerdadeiroTeste) {
+
+            //Este teste não será executado se o ehVerdadeiroTeste for = true
+            console.log('Foi executado')
+
+        }
+        /*
+        Para esse código ser executado mude o valor do ehVerdadeiroTeste para false
+        assim a negação de um valor falso se torna verdadeiro e o código é executado.
+           */
+        ehVerdadeiroTeste = false;
+
+        if (!ehVerdadeiroTeste) {
+
+            // Este teste será executado já que a variaável ehVerdadeiroTeste é = a false, quando faço a sua negação(!) o seu valor passa a ser verdadeiro(true);
+            console.log('Ele Não é verdadeiro')
+
+        }
+            /*
+                
+                BIT A BIT(bitwise)
+                
+                " & " - E
+                " | " - OU
+                " ~ " - Negação
+                " ^ " - Ou Exclusivo(Xor)
+                " << "- Deslocamento para a esquerda(left shift)
+                " >> "- Deslocamento para a direita(right shift)
+                
+            */
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

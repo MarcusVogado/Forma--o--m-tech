@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+                    Funções são muitos importantes quando trabalhamos com JavaScript.
+
+        */
+
+        // Sintexe básica de uma função:
+
+        function digaOla() {
+            console.log('Olá');
+        }
+
+        //para executar a função fazemos da seguinte forma
+
+        digaOla();
+
+        //Também podemos passar argumentos para uma função, são variáveis que se supõe que a função fará a algo.
+
+        function comprimente(nome) {
+            console.log('Olá, ' + nome);
+        }
+
+        let nome = 'Marcus Vogado';
+        comprimente(nome);
+        //Se passarmos dois argumentos ele só irá utilizar o primeiro e vai ignorar o segundo, pois na declaração da função estamos esperando apenas um argumento
+
+        comprimente("Marcus", "João");
+
+
+        //aqui vamos receber dois argumentos para realizar uma soma
+        function somarExemploUm(num1, num2) {
+            return num1 + num2;
+        }
+
+        let result = somarExemploUm(10, 16)
+        console.log('O resultado da soma é: ' + result);
+
+        //também podemos fazer assim
+        function somarExemploDois(num1, num2) {
+            console.log(num1 + num2);
+        }
+
+        somarExemploDois(20, 30) 
+    </script>
+</head>
+<body>
+
+</body>
+</html>
