@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <section class="content__summary">
+            <article>
+                <h1>Git e GitHub</h1>
+            </article>
+            <article>
+                <h3>O que é Git?</h3>
+                <p>
+                    O <b>Git</b> é um sistema de controle de versão que, é uma máquina do tempo muito rápida e é um robô
+                    de integração muito competente.</p>
+                <p>
+                    Git grava as mudanças feitas em nossos arquivos ao longo do tempo, por meio de
+                    "snapshots".</p>
+                <p>
+                    Funciona como uma máquina do tempo para nosso código. Permitando o acompanhamento das alterações
+                    desde as versões mais antigas.</p>
+                <P> Tornando possível detectar e mesclar alterações nos mesmos arquivos, além de identificar conflitos,
+                    tudo de maneira automática, é conhecido como sistema de controle de versão</P>
+
+                <p>
+                    Foi criado em 2005 por Linus Torvalds, o mesmo criador do Linux
+                </p>
+            </article>
+            <article>
+                <h3>O que é GitHub?</h3>
+                <p>O GitHub é uma aplicação Web que possibilita a hospedagem de repositórios Git, além de servir como
+                    uma rede social para programadores.</p>
+                <p>
+                    Foi criado em 208, diversos projetos de código aberto importantes são hospedados no GitHub.
+                </p>
+            </article>
+        </section>
+        <section class="content__installation">
+            <article>
+                <h3>Instalando e configurando o Git</h3>
+                <p>Para fazer o download do git acessamos o seguinte site: <a href=" http://msysgit.github.io/"
+                        target="_blank"> http://msysgit.github.io/</a></p>
+                <p>
+                    A instalação é bastante simples. Escolha as opções padrão.
+                    Serão instalados alguns programas, sendo o mais importante o Git Bash,
+                    que permite que o Git seja executado pela linha de comando no Windows.
+                    Dê duplo clique no ícone do Git Bash e será aberto um terminal, com o
+                    seguinte prompt na linha de comando:
+                    $
+                    Esse prompt será seu amigo a partir de agora. Não tenha medo! Sempre
+                    que falarmos de terminal, estaremos falando do Git Bash.
+
+                </p>
+                <h4>
+                    Instalando no Mac
+                </h4>
+                <p>
+                    Baixe a última versão do instalador gráfico do Git para Mac OS X a partir
+                    do link: https://code.google.com/p/git-osx-installer/downloads
+                    Abra um terminal e prepare-se para utilizar o Git!
+                </p>
+                <h4>
+                    Instalando no Linux
+                </h4>
+                <p>
+                    Para instalar o Git no Ubuntu, ou em uma outra distribuição baseada em
+                    Debian, execute em um terminal:
+                    $ sudo apt-get install git
+                    No Fedora, utilize:
+                    $ sudo yum install git
+                    Para as demais distribuições do Linux, veja o comando em: http://
+                    git-scm.com/download/linux
+                </p>
+            </article>
+            <article>
+                <h3>Configurações Básicas</h3>
+                <p>
+                    É importante nos identificarmos para o Git, informando nosso nome e
+                    e-mail. Em um terminal, execute os comandos a seguir: <br>
+                    $ git config --global user.name "Fulano da Silva"
+                    $ git config --global user.email fulanodasilva.git@gmail.com
+                </p>
+            </article>
+        </section>
+        <section class="content__commands">
+            <h3>Linha de Comando</h3>]
+            <h4>Comandos mais utilizados</h4>
+            <p>
+                A maneira mais comum de usar Git é pela linha de comando, acessível
+                através de um terminal. É o jeito que a maior parte dos bons profissionais
+                do mercado utiliza o Git e será nossa escolha nesse livro.
+            </p>
+            <p class="comand">
+                <span>git init:</span>Para transformar o diretório atual em um repositório do Git.
+            </p>
+            <p class="comand">
+                <span>git status:</span>Para ver a situação dos arquivos no repositório Git.
+            </p>
+            <p class="comand">
+                <span>git add:</span> Para que o arquivo seja rastreado e seja adicionado a fase de stage(pronto para
+                ser gravado).
+            </p>
+            <p class="comand">
+                <span>git commit-m "Mensagem" :</span> Para gravar(comitar) as alterações no repositório.
+            </p>
+            <p class="comand">
+                <span>git commit -am "Mensagem":</span> Com este comando juntamos o comando git add e git commit.
+            </p>
+            <p class="comand">
+                <span>git log</span>Para ver os commits que foram feitos.
+            </p>
+            <p class="comand">
+                <span>git remote add origin &lt;link do repositório&gt; :</span> Para apontar para um repositório online
+                no GitHub
+            </p>
+            <p class="comand">
+                <span>git clone &lt;link do repositório&gt; :</span> Para enviar as mudanças locais para o repositório
+                online
+            </p>
+            <p class="comand">
+                <span>git push origin master:</span> Para enviar as mudanças locais para o repositório online
+            </p>
+            <p class="comand">
+                <span>git branch &lt;nome da branch a ser criada&gt;:</span> Para criar uma nova branch
+            </p>
+            <p class="comand">
+                <span>git checkout &lt;nome da branch &gt;:</span> Para mudar de branch.
+            </p>
+
+            <p class="comand">
+                <span>git merge &lt;nome da branch a ser mergeada&gt;:</span> Para salvar alterações de uma branch
+                separada na branch que estamos trabalhando
+            </p>
+        </section>
+        <section class="content__ignore">
+            <h3>Utilizando o gitignore</h3>
+            <p>
+                Suponhamos que temos um arquivo que não queremos enviar ou salvar no nosso repositório.
+            </p>
+            <p>
+                Para isso utilizamos o gitignore, criamos um arquivo com o nome : ".gitignore", e dentro deste arquivo
+                colocamos o nome e extensão do arquivo a ser ignorado, ex: "texto.txt", se precisamor ignorar todos os
+                arquivos com a extensão txt, fazemos da seguinte forma:
+                "*.txt", assim todos os arquivos com a extensão txt serão ignorados.
+            </p>
+            <p>
+                Há um projeto no GitHub com exemplos de arquivos .gitignore
+                para diversas linguagens de programação e tecnologias: https://github.
+                com/github/gitignore
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
