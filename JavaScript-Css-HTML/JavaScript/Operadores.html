@@ -191,18 +191,26 @@
 
         }
             /*
-                
-                BIT A BIT(bitwise)
-                
-                " & " - E
-                " | " - OU
-                " ~ " - Negação
-                " ^ " - Ou Exclusivo(Xor)
-                " << "- Deslocamento para a esquerda(left shift)
-                " >> "- Deslocamento para a direita(right shift)
-                
-            */
+            
+            BIT A BIT(bitwise)
+            
+            " & " - E
+            " | " - OU
+            " ~ " - Negação
+            " ^ " - Ou Exclusivo(Xor)
+            " << "- Deslocamento para a esquerda(left shift)
+            " >> "- Deslocamento para a direita(right shift)
+            
+        */
 
+       let valor= prompt("informe o valor da compra")
+       let tipoPagamento = confirm("Pagamento à vista?")
+
+        if(valor>=200 && tipoPagamento==true){
+            document.write(`Total a pagar  R$ ${valor*0.9} `)
+        }
+
+        let testeTernario = valor>200? console.log('eh Maior'): console.log('eh Menor');
     </script>
 </head>
 
