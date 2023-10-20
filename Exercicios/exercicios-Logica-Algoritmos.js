@@ -1,10 +1,11 @@
 //Imposto de Renda
-
+/*
 let salarioBruto =4520
 let valorImposto;
 if(salarioBruto>= 0 &&salarioBruto<=2000){
     console.log("Isento")
 }
+
 else if(salarioBruto>2000.01 && salarioBruto<=3000){
 
     valorImposto = (salarioBruto -2000.0)*0.08;
@@ -19,8 +20,7 @@ else{
     valorImposto = (salarioBruto-4500)*0.28 +(1500*0.18)+(1000*0.08)
     console.log(valorImposto)
 }
-
-
+*/
 
 
 //DDD
@@ -37,9 +37,6 @@ if (verificarCidade){
     console.log("nao existe")
 }
 */
-
-
-
 
 
 //Formula de Bhaskara
@@ -119,12 +116,12 @@ console.log(result.toFixed(3))
 
 
 //Maior
-/*
-let arrayValues = "7 14 106".split(" ")
-let values=arrayValues.map(Number)
-let max = Math.max(...values)
+
+let arrayValues = "7 14 106".split(" ").map(Number)
+
+let max = Math.max(...arrayValues)
 console.log(max)
-*/
+
 
 //Área
 
