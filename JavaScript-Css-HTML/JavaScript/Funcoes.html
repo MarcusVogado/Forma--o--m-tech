@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-
-        
-       // Funções são muitos importantes quando trabalhamos com JavaScript.        
-
+        // Funções são muitos importantes quando trabalhamos com JavaScript.        
+        function exibirMessage() {
+            alert("Foi clicado");
+        }
         // Sintexe básica de uma função:
 
         function digaOla() {
@@ -31,8 +31,6 @@
         //Se passarmos dois argumentos ele só irá utilizar o primeiro e vai ignorar o segundo, pois na declaração da função estamos esperando apenas um argumento
 
         comprimente("Marcus", "João");
-
-
         //aqui vamos receber dois argumentos para realizar uma soma
         function somarExemploUm(num1, num2) {
             return num1 + num2;
@@ -46,10 +44,61 @@
             console.log(num1 + num2);
         }
 
-        somarExemploDois(20, 30) 
+        somarExemploDois(20, 30);
+        //Funcao para a tag de selecao
+
+        function linguagem(elemento) {
+            console.log(elemento)
+        }
+
+        function enviarFormulario() {
+            // Obtém o formulário e seus dados
+            var formulario = document.getElementById("meuFormulario");
+            var formData = new FormData(formulario);
+
+            // Itera sobre os campos do formulário
+            for (var [chave, valor] of formData.entries()) {
+                console.log(chave + ": " + valor);
+            }
+        }
+
+
+        function pressionandoTeclas(tecla) {
+            document.getElementsByTagName('h1')[0].innerText=tecla
+        }
+
+
     </script>
 </head>
-<body>
 
+<body>
+    <button onclick="exibirMessage()">Clique Aqui</button>
+    <hr>
+    <select onchange="linguagem(this.value)" name="" id="">
+        <option value="">Escolha uma linguagem</option>
+        <option value="1">HTML</option>
+        <option value="2">CSS</option>
+        <option value="3">JavaScript</option>
+    </select>
+    <hr>
+    <!--Formulário-->
+
+    <form id="meuFormulario">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome">
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+
+        <label for="password">Senha:</label>
+        <input type="password" id="idade" name="idade">
+
+        <button type="button" onclick="enviarFormulario()">Enviar</button>
+    </form>
+    <hr>
+    <!--Funcao de teclado -->
+    <input type="text" onkeyup="pressionandoTeclas(this.value)">
+    <h1></h1>
 </body>
+
 </html>
