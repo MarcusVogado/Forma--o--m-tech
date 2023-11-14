@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // // JSON -JavaScript Object Notation
+        // let pessoa = {
+        //     nome: 'Marcus',
+        //     idade: 29,
+        //     profissao: 'programador'
+        // }
+        // //document.write(JSON.stringify(pessoa))
+
+        // //Elementos Dinâmicos com JSON
+        // let cidades = ['São Paulo', 'Curitiba', 'Rio de Janeiro', 'Brasília']
+        // //Ao carregar
+        // window.onload = function () {
+        //     //obter o elemento ul
+        //     let lista = document.getElementsByTagName('ul')[0];
+        //     //Criar elemento li
+        //     for (let i = 0; i < cidades.length; i++) {
+        //         //criar elemento li 
+        //         let item = document.createElement('li')
+        //         //adicionar texto no elemento li
+        //         item.innerText = cidades[i]
+        //         //adicionar elemento li na lista
+        //         lista.appendChild(item);
+        //     }
+        // }
+        // // Trabalhando com Timer 
+        // setTimeout(function () {
+        //     alert("Deslogado")
+        // }, 3000);
+
+        // //Ao carregar a página
+        // window.onload = function () {
+        //     //Executa uma função a cada um segundo
+        //     setInterval(() => {
+        //         let time = new Date();
+        //         let horaAtual = time.getHours() + ":";
+        //         horaAtual += time.getMinutes() + ":";
+        //         horaAtual += time.getSeconds()
+        //         document.getElementsByTagName('p')[0].innerText = horaAtual;
+        //     }, 1000);
+        // }
+        let count=0
+        window.onload = () => {
+            let botao = document.createElement("button");
+            botao.innerText = 'Clique Aqui'
+            botao.addEventListener('click',()=>{
+                count++
+                console.log(count)                
+            });
+            
+            document.getElementsByTagName('body')[0].appendChild(botao)            
+
+        }
+    </script>
+</head>
+
+<body>
+    <ul>
+
+    </ul>
+
+    <p>
+
+    </p>
+</body>
+
+</html>
