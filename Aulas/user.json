@@ -1,0 +1,29 @@
+{
+    "usuarios": [
+        {
+            "nome": "Marcus",
+            "idade": 29,
+            "localidade": "DF"
+        },
+        {
+            "nome": "José",
+            "idade": 30,
+            "localidade": "RJ"
+        },
+        {
+            "nome": "Alberto",
+            "idade": 24,
+            "localidade": "SP"
+        }
+    ],
+    "Produtos": [
+        {
+            "nome": "Papel Toalha",
+            "valor":15
+        },
+        {
+            "nome": "Papel A4",
+            "valor":10
+        }
+    ]
+}
