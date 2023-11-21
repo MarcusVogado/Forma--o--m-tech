@@ -38,12 +38,12 @@ const todos = [
         description: "Estudar Programação",
         isCompleted: false,
         dateTime: "21/11/2023 19:00:00"
-    }, 
+    },
     {
-        id:2,
-        description:"Estudar Inglês",
-        isCompleted:false,
-        dateTime:"21/11/2023 22:00:00"
+        id: 2,
+        description: "Estudar Inglês",
+        isCompleted: false,
+        dateTime: "21/11/2023 22:00:00"
     }
 ]
 
