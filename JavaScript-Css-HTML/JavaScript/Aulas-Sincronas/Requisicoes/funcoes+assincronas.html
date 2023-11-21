@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Asssíncrona
+
+        //     function mensagem1() {
+        //         return new Promise((retorno) => {
+        //             setTimeout(() => {
+        //                 retorno('Primeira Mensagem');
+        //             }, 1000)
+        //         });
+        //     }
+        //     function mensagem2() {
+        //         return 'Segunda Mensagem'
+        //     }
+
+        //     async function executarMensagens() {
+        //         let r1 = await mensagem1();
+        //         let r2 = mensagem2();
+        //         console.log(r1)
+        //         console.log(r2)
+        //     }
+        //     executarMensagens()
+
+        //     // Poké Api
+        //     //Função para requisição
+        //    async function requisicao() {
+        //         for (let indice = 1; indice <= 151; indice++){
+        //             let requisicao = await  fetch('https://pokeapi.co/api/v2/pokemon/' + indice);
+        //             let pokemon = await requisicao.json();
+        //             console.log(pokemon.name)
+        //         }    
+        //     }
+        //     // Chamar a função de equisição
+        //     requisicao();
+
+        // Requisição
+        async function requisicao() {
+            let requisicao = await fetch('https://pokeapi.co/api/v2/pokemon?limit=151');
+            let pokemons = await requisicao.json();
+            pokemons.results.map(pokemon => {
+                requisicaoPokemon(pokemon.url)
+            })
+        }
+        // Requisição de Pokemons
+        async function requisicaoPokemon(url) {
+            let requisicao = await fetch(url);
+            let pokemon = await requisicao.json()
+            //obter o elemento listagem
+            let listagem = document.getElementById('listagem')
+        
+            //criar uma elemento de imagem
+            let imagem = document.createElement('img');
+            //Adicionar a imagem do pokémon
+
+            imagem.src= pokemon.sprites.front_default;
+
+            //adicionar a imagem na div listagem
+            listagem.appendChild(imagem)
+
+        }
+        window.onload = function () {
+            requisicao();
+        }
+    </script>
+</head>
+
+<body>
+    <div id="listagem">
+
+    </div>
+</body>
+
+</html>
