@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Back_End_Estudos_Front_End.Controllers
 {
-    [Controller]
+    [ApiController]
     [Route("api/[controller]")]
     public class TarefaController : ControllerBase
     {
@@ -17,7 +17,16 @@ namespace Back_End_Estudos_Front_End.Controllers
                 new Tarefa { Id = 2, Description="Estudar Inglês",IsCompleted=false},
                 new Tarefa { Id = 3, Description="Criar uma API"}
             };
-            return new JsonResult(tarefas);
+
+
+            Response.ContentType = "application/json";
+            Response.StatusCode = 200;            
+            return Ok(new JsonResult(tarefas)
+            {
+                ContentType = "application/json",
+                StatusCode = 200,
+                SerializerSettings = true,
+            });
         }
     }
 }

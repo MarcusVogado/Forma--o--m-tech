@@ -1,5 +1,7 @@
 {
-    "usuarios": [
+    "Response": "json-type",
+    "StatusCode": 200,
+    "values": [
         {
             "nome": "Marcus",
             "idade": 29,
@@ -19,11 +21,11 @@
     "Produtos": [
         {
             "nome": "Papel Toalha",
-            "valor":15
+            "valor": 15
         },
         {
             "nome": "Papel A4",
-            "valor":10
+            "valor": 10
         }
     ]
 }
