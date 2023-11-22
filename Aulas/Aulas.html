@@ -20,10 +20,15 @@
         // console.log(buscarTarefas());
 
         class Tarefa {
-            constructor(id, description, isCompleted) {
+            constructor(id, description, isCompleted,daysAndTimes) {
                 this.id = id;
                 this.description = description
                 this.isCompleted = isCompleted;
+                this.daysAndTimes={
+                    dayOfWeek,
+                    starTime,
+                    endTime
+                }
             }
         }
 
@@ -31,24 +36,25 @@
         fetch("https://localhost:7200/api/Tarefa/")
             .then(response => response.json())
             .then(tarefasJson => {
-                tarefasJson.value.map((tarefa) => {
-                    let tarefaClass = {
-                        id: tarefa.id,
-                        description: tarefa.description,
-                        isCompleted: tarefa.isCompleted
-                    }
-                    let tarefasList = document.getElementById('tarefas')
-                    let tarefaConcluida;
-                    if (tarefaClass.isCompleted) {
-                        tarefaConcluida = "Sim"
-                    } else {
-                        tarefaConcluida = "Não"
-                    }
-                    tarefasList.innerHTML += `<p>id: ${tarefa.id} </p>
-                        <p>Description: ${tarefa.description}</p>
-                        <p> Tarefa Concluída:${tarefa.isCompleted}</p>
-                         <hr> `
-                })
+                console.table(tarefasJson.tarefas)
+                // tarefasJson.tarefas.map((tarefa) => {
+                //     let tarefaClass = {
+                //         id: tarefa.id,
+                //         description: tarefa.description,
+                //         isCompleted: tarefa.isCompleted
+                //     }
+                //     let tarefasList = document.getElementById('tarefas')
+                //     let tarefaConcluida;
+                //     if (tarefaClass.isCompleted) {
+                //         tarefaConcluida = "Sim"
+                //     } else {
+                //         tarefaConcluida = "Não"
+                //     }
+                //     tarefasList.innerHTML += `<p>id: ${tarefa.id} </p>
+                //         <p>Description: ${tarefa.description}</p>
+                //         <p> Tarefa Concluída:${tarefa.isCompleted}</p>
+                //          <hr> `
+                // })
             })
 
     </script>
