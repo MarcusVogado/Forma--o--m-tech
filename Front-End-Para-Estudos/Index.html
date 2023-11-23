@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/css/index.css">    
+    <script src="src/js/task-api.js" defer></script>
+    <script src="src/js/tarefa-model.js" defer></script>
+    <script src="src/js/main.js" defer></script>
+    <title>Minha Agenda</title>    
+</head>
+
+<body>
+    <div class="dias__semana">
+        <ul class="dias__semana-list">
+            <li class="semana__list-item" onclick="loadTasks(1)">Segunda-Feira</li>
+            <li class="semana__list-item" onclick="loadTasks(2)" >Terça-Feira</li>
+            <li class="semana__list-item" onclick="loadTasks(3)">Quarta-Feira</li>
+            <li class="semana__list-item" onclick="loadTasks(4)">Quinta-Feira</li>
+            <li class="semana__list-item" onclick="loadTasks(5)">Sexta-Feira</li>
+            <li class="semana__list-item" onclick="loadTasks(6)">Sábado</li>
+            <li class="semana__list-item" onclick="loadTasks(0)">Domingo</li>
+        </ul>
+    </div>
+    <div id="tarefas">
+        <table id="table_tarefas" class="table__tarefas">
+            <thead class="table__head">
+                <tr>
+                    <td>
+                        Horário Inicial
+                    </td>
+                    <td>
+                        Horário Final
+                    </td>
+                    <td>
+                        Tarefa
+                    </td>
+                    <td>Dias da Semana</td>
+                </tr>
+            </thead>
+            <tbody id="table__body">
+
+            </tbody>
+    </div>
+</body>
+
+</html>

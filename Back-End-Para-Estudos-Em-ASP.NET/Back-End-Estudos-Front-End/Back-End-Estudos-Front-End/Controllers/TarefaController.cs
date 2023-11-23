@@ -7,7 +7,6 @@ namespace Back_End_Estudos_Front_End.Controllers
     [Route("api/[controller]")]
     public class TarefaController : ControllerBase
     {
-
         [HttpGet]
         public IActionResult ListaDeTarefas()
         {
@@ -19,7 +18,6 @@ namespace Back_End_Estudos_Front_End.Controllers
                 ContentType = "application/json"
             };
         }
-
         public static List<Tarefa> GetListaTarefas()
         {
             var tarefas = new List<Tarefa>()
@@ -85,9 +83,9 @@ namespace Back_End_Estudos_Front_End.Controllers
                        Description = "Aulas Ímã Tech",
                        IsCompleted = true,
                        DaysAndTimes = new DaysAndTimes[]{
-                          new DaysAndTimes {DayOfWeek= DayOfWeek.Sunday, StartTime = new TimeSpan(19,0,0),EndTime= new TimeSpan(21,0,0)},
+                          new DaysAndTimes {DayOfWeek= DayOfWeek.Monday, StartTime = new TimeSpan(19,0,0),EndTime= new TimeSpan(21,0,0)},
                           new DaysAndTimes {DayOfWeek= DayOfWeek.Wednesday, StartTime = new TimeSpan(19, 0, 0),EndTime= new TimeSpan(21, 0, 0)},
-                          new DaysAndTimes {DayOfWeek= DayOfWeek.Saturday,StartTime = new TimeSpan(19, 0, 0),EndTime= new TimeSpan(21, 0, 0)}
+                          new DaysAndTimes {DayOfWeek= DayOfWeek.Friday,StartTime = new TimeSpan(19, 0, 0),EndTime= new TimeSpan(21, 0, 0)}
                        }
                 }
             };
