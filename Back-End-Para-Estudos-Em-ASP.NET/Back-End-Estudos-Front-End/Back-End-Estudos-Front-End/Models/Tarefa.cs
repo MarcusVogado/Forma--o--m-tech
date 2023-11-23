@@ -9,7 +9,6 @@
 
     }
 
-
     public class DaysAndTimes
     {
         public DayOfWeek DayOfWeek { get; set; }
@@ -17,5 +16,4 @@
         public TimeSpan EndTime { get; set; }
 
     }
-
 }

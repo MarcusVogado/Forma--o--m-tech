@@ -1,0 +1,66 @@
+body {
+    margin: 0 auto;
+    height: 100%;
+    font-family: sans-serif;
+    font-size: 0.3rem;
+}
+
+p,
+li,
+td,
+tr,
+div,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dias__semana {
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.dias__semana-list {
+    display: flex;
+    justify-content: center;    
+    gap: 10px;
+    width: 100%;
+}
+
+.semana__list-item {
+    padding: 5px 0;
+    list-style: none;
+}
+
+.table__tarefas {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+td,
+tr {
+    border: 1px solid black;
+    text-align: center;
+    padding: 0px 5px;
+}
+
+.body__item {
+    padding: 5px;
+}
+
+.body__item-dayOfWeek {
+    background-color: aqua;
+    max-width: max-content;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.daysWeek {
+    border: none;
+    display: flex;
+    gap: 1px;
+}
