@@ -15,7 +15,7 @@ function loadTasks(daySelect) {
                     tasksDaySelect.push(new Tarefa(tarefa.id, tarefa.description, tarefa.isCompleted, day.dayOfWeek, day.startTime, day.endTime, tarefa.daysAndTimes))
                 }
             })
-        })
+        })                
         //Buscando o id do Elemento HTML onde a tabela com as tarefas serão inseridos
         let tarefasList = document.getElementById('table__body')
         tarefasList.innerHTML = ''
