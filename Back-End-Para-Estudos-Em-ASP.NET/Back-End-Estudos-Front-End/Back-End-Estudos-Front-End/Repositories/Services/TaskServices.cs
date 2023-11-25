@@ -5,11 +5,11 @@ namespace Back_End_Estudos_Front_End.Repositories.Services
 {
     public class TaskServices : ITaskServices
     {
-        public List<Tarefa> GetAllTasks()
+        public List<Annotation> GetAllTasks()
         {
-            var tasks = new List<Tarefa>()
+            var tasks = new List<Annotation>()
             {
-                new Tarefa
+                new Annotation
                 {
                     Id = 1,
                     Description="Estudar JavaScript",
@@ -53,7 +53,7 @@ namespace Back_End_Estudos_Front_End.Repositories.Services
 
                     }
                 },
-                new Tarefa
+                new Annotation
                 {
                         Id = 2,
                         Description="Estudar HTML e CSS",
@@ -97,7 +97,7 @@ namespace Back_End_Estudos_Front_End.Repositories.Services
 
                     }
                 },
-                new Tarefa
+                new Annotation
                 {
                        Id = 3,
                        Description = "Estudar Algoritmos",
@@ -141,7 +141,7 @@ namespace Back_End_Estudos_Front_End.Repositories.Services
 
                     }
                 },
-                new Tarefa
+                new Annotation
                 {
                        Id = 3,
                        Description = "Estudar Inglês",
@@ -185,7 +185,7 @@ namespace Back_End_Estudos_Front_End.Repositories.Services
 
                     }
                 },
-                new Tarefa
+                new Annotation
                 {
                        Id = 4,
                        Description = "Estudar TypeScrip",
@@ -229,7 +229,7 @@ namespace Back_End_Estudos_Front_End.Repositories.Services
 
                     }
                 },
-                new Tarefa
+                new Annotation
                 {
                        Id = 5,
                        Description = "Aulas Ímã Tech",
