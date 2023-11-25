@@ -1,3 +1,6 @@
+using Back_End_Estudos_Front_End.Repositories.Contracts;
+using Back_End_Estudos_Front_End.Repositories.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+//Adicionando Permissão de Cors
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
@@ -16,6 +20,9 @@ builder.Services.AddCors(options =>
         .AllowAnyMethod();
     });
 });
+//Injeção de Dependencias
+builder.Services.AddScoped<ITaskServices, TaskServices>();
+
 
 var app = builder.Build();
 

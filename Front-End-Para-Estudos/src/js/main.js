@@ -6,13 +6,13 @@ console.log(tarefas)
 
 function loadTasks(daySelect) {
     //Chamando a funçao de chamada da API
-    taskApi.GetAllTasks().then(tarefas => {
+    taskApi.GetAllTasks().then(tasks => {
         let tasksDaySelect = []        
-        //Filtrando as tarefas de acordo com o dia selecionado
-        tarefas.map((tarefa) => {
-            tarefa.daysAndTimes.map((day) => {
+        //Filtrando as tasks de acordo com o dia selecionado
+        tasks.map((task) => {
+            task.daysAndTimes.map((day) => {
                 if (day.dayOfWeek === daySelect) {
-                    tasksDaySelect.push(new Tarefa(tarefa.id, tarefa.description, tarefa.isCompleted, day.dayOfWeek, day.startTime, day.endTime, tarefa.daysAndTimes))
+                    tasksDaySelect.push(new Tarefa(task.id, task.description, task.isCompleted, day.dayOfWeek, day.startTime, day.endTime, task.daysAndTimes))
                 }
             })
         })                
@@ -22,21 +22,21 @@ function loadTasks(daySelect) {
         //Ordenando a lista Pelo startTime das tarefas do menor para o maior
         tasksDaySelect.sort((a, b) => a.startTime.localeCompare(b.startTime))
         //Adicionando as tarefas ao HTML 
-        tasksDaySelect.map((tarefa) => {
+        tasksDaySelect.map((task) => {
             tarefasList.innerHTML += ` 
                 <tbody id="table__body">
                     <tr>
                         <td class="body__item">
-                            ${tarefa.startTime}
+                            ${task.startTime}
                         </td>
                         <td class="body__item">
-                        ${tarefa.endTime}
+                        ${task.endTime}
                         </td class="body__item">
                         <td class="body__item">
-                            ${tarefa.description}
+                            ${task.description}
                         </td>
                         <td class="body__item daysWeek">                       
-                        ${tarefa.daysAndTimes.map((dia) => `<div class="body__item-dayOfWeek">
+                        ${task.daysAndTimes.map((dia) => `<div class="body__item-dayOfWeek">
                         ${(() => {
                     switch (dia.dayOfWeek) {
                         case 1:
