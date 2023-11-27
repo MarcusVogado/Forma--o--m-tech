@@ -6,9 +6,9 @@ namespace Back_End_Estudos_Front_End.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class TarefaController : ControllerBase
+    public class TasksController : ControllerBase
     {private readonly ITaskServices _taskServices;
-        public TarefaController(ITaskServices taskServices)
+        public TasksController(ITaskServices taskServices)
         {
             _taskServices = taskServices;
         }
@@ -23,9 +23,7 @@ namespace Back_End_Estudos_Front_End.Controllers
                 StatusCode = 200,
                 ContentType = "application/json"
             };
-        }       
-
+        }  
     }
-
 }
 

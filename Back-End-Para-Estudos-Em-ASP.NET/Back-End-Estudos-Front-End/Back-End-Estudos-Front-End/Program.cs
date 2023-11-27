@@ -23,7 +23,6 @@ builder.Services.AddCors(options =>
 //Injeção de Dependencias
 builder.Services.AddScoped<ITaskServices, TaskServices>();
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -32,7 +31,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
 
 app.UseHttpsRedirection();
 
