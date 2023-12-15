@@ -1,0 +1,10 @@
+{
+  "alunos": [
+    {
+      "id": 1,
+      "nome": "Marcus Vogado",
+      "nota_um": 8,
+      "nota_dois": 7
+    }
+  ]
+}

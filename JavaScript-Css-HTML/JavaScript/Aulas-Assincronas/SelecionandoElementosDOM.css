@@ -34,23 +34,24 @@
     padding: 3rem 2rem;
   }
   
-  #my-form {
+  .my-form {
     padding: 2rem;
     background: #f4f4f4;
     border-radius: 10px;
   }
   
-  #my-form label {
+  .my-form label {
     display: block;
   }
   
-  #my-form input[type="text"] {
+  .my-form input {
     width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
   }
+
   
   .btn {
     display: block;

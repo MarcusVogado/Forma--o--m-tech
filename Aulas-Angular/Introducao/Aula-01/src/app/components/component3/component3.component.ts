@@ -8,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrl: './component3.component.css'
 })
 export class Component3Component {
+  media: number = 8
+  linguagem: string = 'CSS'
+  nomes: string[] = ['Luciano','Alberto','Marcus']
 
 }

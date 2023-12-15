@@ -1,0 +1,9 @@
+<input type="text" [(ngModel)]='cep'>
+<button (click)="buscarEndereco()">Buscar Endereco</button>
+
+<ul *ngIf="endereco">
+    <li>{{endereco.bairro}}</li>
+    <li>{{endereco.cep}}</li>
+    <li>{{endereco.ddd}}</li>
+    <li>{{endereco.ibge}}</li>
+</ul>

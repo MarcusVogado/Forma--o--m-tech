@@ -1,0 +1,20 @@
+<h1>Postagem</h1>
+
+<table>
+    <thead>
+        <tr>
+            <td>Código do Usuário</td>
+            <td>Código</td>
+            <td>Título</td>
+            <td>Postagem</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let post of listaPost">
+            <td>{{post.userId}}</td>
+            <td>{{post.id}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+        </tr>
+    </tbody>
+</table>
