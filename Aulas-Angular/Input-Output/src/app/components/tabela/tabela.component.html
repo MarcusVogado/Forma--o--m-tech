@@ -1,0 +1,19 @@
+<!-- <p>{{listAlunos|json}}</p> -->
+<table class="table">
+    <thead>
+        <tr>
+            <td>Nome</td>
+            <td>Nota 1</td>
+            <td>Nota 2</td>
+            <td>Média</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let aluno of listAlunos">
+            <td>{{aluno.nome}}</td>
+            <td>{{aluno.nota1}}</td>
+            <td>{{aluno.nota2}}</td>
+            <td>{{aluno | media}}</td>
+        </tr>
+    </tbody>
+</table>
